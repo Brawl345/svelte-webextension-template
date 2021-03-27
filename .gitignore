@@ -1,0 +1,11 @@
+.idea/
+/node_modules/
+/public/build/
+/public/manifest.json
+.DS_Store
+Thumbs.db
+web-ext-artifacts/
+*.iml
+*.pem
+*.crx
+*.xpi
