@@ -1,5 +1,7 @@
 <script>
-  let name = "World";
+  import i18n from "../utils/i18n";
+
+  let name = "";
 </script>
 
 <style>
@@ -9,8 +11,8 @@
     }
 </style>
 
-<label>Your name:
+<label>{i18n.name}:
   <input bind:value={name} type="text">
 </label>
 
-<h1>Hello {name}</h1>
+<h1>{i18n.hello} {name}</h1>

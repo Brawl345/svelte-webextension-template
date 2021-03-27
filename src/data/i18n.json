@@ -1,0 +1,14 @@
+{
+  "en": {
+    "name": "Your name",
+    "hello": "Hello"
+  },
+  "de": {
+    "name": "Dein Name",
+    "hello": "Hallo"
+  },
+  "ja": {
+    "name": "あなたの名前",
+    "hello": "こんにちは"
+  }
+}
