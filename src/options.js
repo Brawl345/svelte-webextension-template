@@ -1,7 +1,7 @@
-import Options from "./pages/Options.svelte";
+import Options from './pages/Options.svelte';
 
 const app = new Options({
-  target: document.body
+  target: document.body,
 });
 
 export default app;

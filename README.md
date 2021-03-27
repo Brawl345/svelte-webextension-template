@@ -26,6 +26,7 @@ npm run dist # For production
 * **dev-autoreload**: Same as above, but with live-reload in web-ext enabled. Could get annoying when you have to open the options page yourself everytime.
 * **build**: Just bundle scripts - you probably don't need to run this.
 * **dist**: Bundles scripts and ZIPs the extension into the `web-ext-artifacts` folder, ready for redistribution
+* **lint**: Runs JavaScript through ESLint plus web-ext (bundled) and shows warnings.
 
 ## Thanks to
 

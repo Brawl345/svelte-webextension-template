@@ -1,9 +1,9 @@
-import browser from "webextension-polyfill";
+import browser from 'webextension-polyfill';
 
 browser.runtime.onInstalled.addListener(({ reason }) => {
-  if (reason === "install") {
+  if (reason === 'install') {
     browser.tabs.create({
-      url: "https://example.com/",
+      url: 'https://example.com/',
       active: false,
     });
   }

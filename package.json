@@ -10,7 +10,8 @@
     "build": "concurrently \"rollup -c\" \"node manifest.js\"",
     "dist": "npm run build & web-ext build --overwrite-dest",
     "dev": "concurrently --kill-others \"rollup -c -w\" \"node manifest.js & web-ext run --start-url=about:debugging#/runtime/this-firefox --no-reload\"",
-    "dev-autoreload": "concurrently --kill-others \"rollup -c -w\" \"node manifest.js & web-ext run --start-url=about:debugging#/runtime/this-firefox\""
+    "dev-autoreload": "concurrently --kill-others \"rollup -c -w\" \"node manifest.js & web-ext run --start-url=about:debugging#/runtime/this-firefox\"",
+    "lint": "eslint src/ & npm run build & web-ext lint --source-dir=\"public\""
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
@@ -19,12 +20,18 @@
     "@rollup/plugin-node-resolve": "^11.0.0",
     "@types/firefox-webext-browser": "^82.0.0",
     "concurrently": "^6.0.0",
+    "eslint": "^7.23.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-svelte3": "^3.1.2",
     "rollup": "^2.3.4",
     "rollup-plugin-css-only": "^3.1.0",
     "rollup-plugin-svelte": "^7.0.0",
     "rollup-plugin-terser": "^7.0.0",
     "svelte": "^3.0.0",
-    "web-ext": "^6.0.0",
+    "web-ext": "^6.0.0"
+  },
+  "dependencies": {
     "webextension-polyfill": "^0.7.0"
   },
   "webExt": {
