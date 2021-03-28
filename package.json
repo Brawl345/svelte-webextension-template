@@ -9,6 +9,7 @@
   "scripts": {
     "build": "concurrently \"rollup -c\" \"node manifest.js\"",
     "dist": "npm run build & web-ext build --overwrite-dest",
+    "start": "sirv public",
     "dev": "concurrently --kill-others \"rollup -c -w\" \"node manifest.js & web-ext run --start-url=about:debugging#/runtime/this-firefox --no-reload\"",
     "dev-autoreload": "concurrently --kill-others \"rollup -c -w\" \"node manifest.js & web-ext run --start-url=about:debugging#/runtime/this-firefox\"",
     "lint": "eslint src/ & npm run build & web-ext lint --source-dir=\"public\""
@@ -32,6 +33,7 @@
     "web-ext": "^6.0.0"
   },
   "dependencies": {
+    "sirv-cli": "^1.0.11",
     "webextension-polyfill": "^0.7.0"
   },
   "webExt": {

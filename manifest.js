@@ -1,29 +1,30 @@
 // generate public/manifest.json
 
-const fs = require("fs");
-const pkg = require("./package.json");
+const fs = require('fs');
+const pkg = require('./package.json');
+
 const content = {
-  name: "Svelte Browser Extension Template",
+  name: 'Svelte Browser Extension Template',
   version: pkg.version,
   description: pkg.description,
   homepage_url: pkg.repository.url,
   manifest_version: 2,
   icons: {
-    128: "images/icon.png",
+    128: 'images/icon.png',
   },
-  permissions: ["tabs"],
+  permissions: ['tabs'],
   background: {
-    scripts: ["build/background.js"]
+    scripts: ['build/background.js'],
   },
   options_ui: {
-    page: "options.html",
+    page: 'options.html',
     open_in_tab: true,
   },
 };
 
 fs.writeFile(
-  __dirname + "/public/manifest.json",
+  `${__dirname}/public/manifest.json`,
   JSON.stringify(content),
   () => {
-  }
+  },
 );
